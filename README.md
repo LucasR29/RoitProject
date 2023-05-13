@@ -28,8 +28,18 @@ the information in an Excel file, removing accents and special characters.
 6. Set Asset value to: **https://cnae.ibge.gov.br/?view=estrutura**
 7. Click "**Create**"
 
+-----------------------------------------------------------------------------------------------------------------------
 
-## Python File ##
+## Python Script ##
 
 Due to development problems, the integration of the script with the automation didn't work.
 If the file is executed separately, it will work as intended.
+
+##Libraries##
+
+- openpyxl
+- unidecode
+
+###What the script does###
+
+The script will open the excel file, remove accents and special characters, and set everything to lower case.
