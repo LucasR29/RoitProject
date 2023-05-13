@@ -20,13 +20,13 @@ the information in an Excel file, removing accents and special characters.
 ## Orchestrator Config -- IMPORTANT ##
 ### Automation will not work without this ###
 
-1. Go to Orchestrator page
-2. Click Assets
+1. Go to **Orchestrator** page
+2. Click **Assets**
 3. Click in the folder **Shared**
-4. Click "Add Assets"
-5. Set Asset name to: IBGE_URL
-6. Set Asset value to: https://cnae.ibge.gov.br/?view=estrutura
-7. Click "Create"
+4. Click "**Add Assets**"
+5. Set Asset name to: **IBGE_URL**
+6. Set Asset value to: **https://cnae.ibge.gov.br/?view=estrutura**
+7. Click "**Create**"
 
 
 ## Python File ##
