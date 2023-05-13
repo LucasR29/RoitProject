@@ -1,8 +1,8 @@
-### Roit Automation Project ###
+# Roit Automation Project #
 
-## Objective ##
+# Objective #
 
-# This project was made with the objective of serving as an RPA engineering test for Roit Company #
+### This project was made with the objective of serving as an RPA engineering test for Roit Company ###
 
 The automation will open Google Chrome, access the IBGE page, and collect information from the CNAE list.
 
@@ -18,7 +18,7 @@ Microsoft Excel
 Google Chrome
 
 ## Orchestrator Config -- IMPORTANT ##
-# Automation will not work without this #
+### Automation will not work without this ###
 
 1. Go to Orchestrator page
 2. Click Assets
