@@ -22,7 +22,7 @@ the information in an Excel file, removing accents and special characters.
 
 1. Go to Orchestrator page
 2. Click Assets
-3. Click in the folder *Shared
+3. Click in the folder *Shared*
 4. Click "Add Assets"
 5. Set Asset name to: IBGE_URL
 6. Set Asset value to: https://cnae.ibge.gov.br/?view=estrutura
