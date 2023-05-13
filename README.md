@@ -33,9 +33,6 @@ the information in an Excel file, removing accents and special characters.
 
 ## Python Script ##
 
-Due to development problems, the integration of the script with the automation didn't work.
-If the file is executed separately, it will work as intended.
-
 ## Libraries ##
 
 - openpyxl
