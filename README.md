@@ -12,10 +12,10 @@ the information in an Excel file, removing accents and special characters.
 
 ## Requirements ##
 
-UI Path Studio
-UI Path Orchestrator connected
-Microsoft Excel
-Google Chrome
+- UI Path Studio
+- UI Path Orchestrator connected
+- Microsoft Excel
+- Google Chrome
 
 ## Orchestrator Config -- IMPORTANT ##
 ### Automation will not work without this ###
