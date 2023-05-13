@@ -142,7 +142,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="1159,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <Sequence DisplayName="Start IBGE" sap:VirtualizedContainerService.HintSize="1159,8371" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="Start IBGE" sap:VirtualizedContainerService.HintSize="1159,7315" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="TableRow">
           <Variable.Default>
@@ -160,13 +160,13 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: IBGE | Concla | Busca online" sap:VirtualizedContainerService.HintSize="1097,8260" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="17d3e5d9-bebe-4433-a7f7-408e173fe6a6" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: IBGE | Concla | Busca online" sap:VirtualizedContainerService.HintSize="1097,7204" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="17d3e5d9-bebe-4433-a7f7-408e173fe6a6" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1063,8042" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1063,6986" sap2010:WorkflowViewState.IdRef="Sequence_22">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dt_SectionTable" />
                 <Variable x:TypeArguments="x:String" Name="CategoriesQuantity" />
@@ -176,29 +176,29 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1001,297" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="How many categories you want to retrieve?" Options="[{&quot;3&quot;,&quot;5&quot;,&quot;7&quot;,&quot;10&quot;,&quot;13&quot;,&quot;15&quot;,&quot;17&quot;,&quot;21&quot;}]" Title="Select quantity">
+              <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Quanity of itens to retrieve" sap:VirtualizedContainerService.HintSize="1001,297" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="How many sections you want to retrieve?" Options="[{&quot;3&quot;,&quot;5&quot;,&quot;7&quot;,&quot;10&quot;,&quot;13&quot;,&quot;15&quot;,&quot;17&quot;,&quot;21&quot;}]" Title="Select quantity">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[CategoriesQuantity]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_SectionTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Seção' ReferenceIdx='0' Name='Seção'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Seção Url' ReferenceIdx='1' Name='Seção Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Divisões' ReferenceIdx='2' Name='Divisões'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Divisões Url' ReferenceIdx='3' Name='Divisões Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Denominação' ReferenceIdx='4' Name='Denominação' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Seção' attr='fulltext' name2='Seção Url' attr2='href' /&gt;&lt;column name='Divisões' attr='fulltext' name2='Divisões Url' attr2='href' /&gt;&lt;column name='Denominação' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="1001,158" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="[Convert.ToInt32(CategoriesQuantity)]" ScopeIdentifier="17d3e5d9-bebe-4433-a7f7-408e173fe6a6" Version="V3">
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_SectionTable]" DisplayName="Extract All Sections And Codes" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Seção' ReferenceIdx='0' Name='Seção'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Seção Url' ReferenceIdx='1' Name='Seção Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Divisões' ReferenceIdx='2' Name='Divisões'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Divisões Url' ReferenceIdx='3' Name='Divisões Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Denominação' ReferenceIdx='4' Name='Denominação' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Seção' attr='fulltext' name2='Seção Url' attr2='href' /&gt;&lt;column name='Divisões' attr='fulltext' name2='Divisões Url' attr2='href' /&gt;&lt;column name='Denominação' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="1001,158" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="[Convert.ToInt32(CategoriesQuantity)]" ScopeIdentifier="17d3e5d9-bebe-4433-a7f7-408e173fe6a6" Version="V3">
                 <uix:NExtractData.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="184, 812, 860, 506" DesignTimeScaleFactor="1" FriendlyName="'Seção Divisões'" FullSelectorArgument="&lt;webctrl id='tbEstrutura' tag='TABLE' /&gt;" Guid="8a6a91fc-33ef-4c3e-9623-b8abbdddb339" InformativeScreenshot="dd729546c90986b58bb3caa980468ac6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NExtractData.Target>
               </uix:NExtractData>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SectionTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1001,7392" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SectionTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1001,6336" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="967,7274" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="967,6218" sap2010:WorkflowViewState.IdRef="Sequence_21">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="905,83" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign DisplayName="Assign Current Division Code" sap:VirtualizedContainerService.HintSize="905,83" sap2010:WorkflowViewState.IdRef="Assign_5">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[DivisionCode]</OutArgument>
                         </Assign.To>
@@ -206,7 +206,7 @@
                           <InArgument x:TypeArguments="x:String">[CurrentRow("Divisões").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="905,83" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign DisplayName="Assign Current Section Letter" sap:VirtualizedContainerService.HintSize="905,83" sap2010:WorkflowViewState.IdRef="Assign_6">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[SectionLetter]</OutArgument>
                         </Assign.To>
@@ -214,7 +214,7 @@
                           <InArgument x:TypeArguments="x:String">[CurrentRow("Seção").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="905,158" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="17d3e5d9-bebe-4433-a7f7-408e173fe6a6" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Section Letter" sap:VirtualizedContainerService.HintSize="905,158" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="17d3e5d9-bebe-4433-a7f7-408e173fe6a6" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=estrutura" CvTextArgument="[SectionLetter]" CvType="Text" DesignTimeRectangle="549, 693, 9, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'A'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='tbEstrutura' tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='{1}' colName='Seção' /&gt;&quot;, TableRow, SectionLetter)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='tbEstrutura' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' colName='Seção' class='' check:text='{0}' /&gt;&quot;, SectionLetter)]" Guid="f92e0bb0-9cf2-4158-9d02-1ce85c9e4b95" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA0AAAASCAYAAACAa1QyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVDhPY/j48eN/UvHQ03Tif5tF/n9dIG47ii4HwZiajs4AawDj3hOoclCMoeloL0jDjP9tUPoomjwIo2mCOg1kA9RGbE5E1YSiEMkAZDVAjKIJ5jSYk9D5MIzQdHfz/zSQyVhw2qo72DXdW9UCVoDqB6gTczf/vwcXg2u6839JLshUTKdAnNjyf8ldhBhqQBCJ4ZrQ/YGOc0tnYWoiBdNL08f/ABx0LzsSoT1WAAAAAElFTkSuQmCC" InformativeScreenshot="9d60fb81e6af7d939d57ab00535f89b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
@@ -225,7 +225,7 @@
                           </uix:TargetAnchorable>
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <Assign sap:VirtualizedContainerService.HintSize="905,83" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign DisplayName="Assign Table Row Index" sap:VirtualizedContainerService.HintSize="905,83" sap2010:WorkflowViewState.IdRef="Assign_7">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[TableRow]</OutArgument>
                         </Assign.To>
@@ -277,31 +277,30 @@
                           </uix:TargetAnchorable>
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="905,94" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[SectionLetter]" />
-                      <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_IBGE_STRUCTURE]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Headers'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='SectionCode'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1 Url' ReferenceIdx='2' Name='Column-1 Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='3' Name='RemainingCodes'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2 Url' ReferenceIdx='4' Name='Column-2 Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' name2='Column-1 Url' attr2='href' /&gt;&lt;column name='Column-2' attr='fulltext' name2='Column-2 Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="905,158" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="17d3e5d9-bebe-4433-a7f7-408e173fe6a6" Version="V3">
+                      <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_IBGE_STRUCTURE]" DisplayName="Extract Structured Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Headers'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='SectionCode'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1 Url' ReferenceIdx='2' Name='Column-1 Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='3' Name='RemainingCodes'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2 Url' ReferenceIdx='4' Name='Column-2 Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' name2='Column-1 Url' attr2='href' /&gt;&lt;column name='Column-2' attr='fulltext' name2='Column-2 Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="905,158" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="17d3e5d9-bebe-4433-a7f7-408e173fe6a6" Version="V3">
                         <uix:NExtractData.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="520, 827, 860, 157" DesignTimeScaleFactor="1" FriendlyName="'Seção: A'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="a4614055-b943-420f-825e-81b006a60cf1" InformativeScreenshot="10976143eab238d267322b48b1742252.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NExtractData.Target>
                       </uix:NExtractData>
-                      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="905,5270" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="905,4348" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
                         <ueab:ExcelProcessScopeX.Body>
                           <ActivityAction x:TypeArguments="ui:IExcelProcess">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="871,5183" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="827,4261" sap2010:WorkflowViewState.IdRef="Sequence_27">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="809,5072" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="IBGE_STRUCTURE">
+                              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="765,4150" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="IBGE_STRUCTURE">
                                 <ueab:ExcelApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="775,4799" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="731,3877" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="FileHaveHeader" />
                                         <Variable x:TypeArguments="s:String[]" Default="[{&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;G&quot;, &quot;H&quot;, &quot;I&quot;, &quot;J&quot;}]" Name="Letters" />
@@ -311,12 +310,12 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A1&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="713,161" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                                      <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A1&quot;)]" DisplayName="Read A1 Cell" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="669,161" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
                                         <ueab:ReadCellValueX.SaveTo>
                                           <OutArgument x:TypeArguments="x:String">[FileHaveHeader]</OutArgument>
                                         </ueab:ReadCellValueX.SaveTo>
                                       </ueab:ReadCellValueX>
-                                      <If Condition="[FileHaveHeader = Nothing]" sap:VirtualizedContainerService.HintSize="713,1011" sap2010:WorkflowViewState.IdRef="If_1">
+                                      <If Condition="[FileHaveHeader = Nothing]" DisplayName="If Cell is not Written" sap:VirtualizedContainerService.HintSize="669,1011" sap2010:WorkflowViewState.IdRef="If_1">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="557,828" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -339,7 +338,7 @@
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Assign sap:VirtualizedContainerService.HintSize="439,83" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                                    <Assign DisplayName="Format Headers" sap:VirtualizedContainerService.HintSize="439,83" sap2010:WorkflowViewState.IdRef="Assign_24">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:String">[NewHeader]</OutArgument>
                                                       </Assign.To>
@@ -347,7 +346,7 @@
                                                         <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(Header.ToString.Normalize(System.Text.NormalizationForm.FormD), "\p{Mn}", "")]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(Letters(Array.IndexOf(HeadersArray, Header)).ToString + &quot;1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,161" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[NewHeader]" />
+                                                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(Letters(Array.IndexOf(HeadersArray, Header)).ToString + &quot;1&quot;)]" DisplayName="Write Header" sap:VirtualizedContainerService.HintSize="439,161" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[NewHeader]" />
                                                     <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,140" sap2010:WorkflowViewState.IdRef="FormatRangeX_8" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(Letters(Array.IndexOf(HeadersArray, Header)).ToString + &quot;1&quot;)]">
                                                       <ueab:FormatRangeX.Alignment>
                                                         <ui:AlignmentOptions HorizontalAlignment="xlHAlignCenter" VerticalAlignment="xlVAlignCenter" WrapText="False" />
@@ -375,13 +374,13 @@
                                           </Sequence>
                                         </If.Else>
                                       </If>
-                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_IBGE_STRUCTURE]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="713,3436" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_IBGE_STRUCTURE]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="669,2514" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                         <ui:ForEachRow.Body>
                                           <ActivityAction x:TypeArguments="sd:DataRow">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRowSectionInfo" />
                                             </ActivityAction.Argument>
-                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="679,3320" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="635,2398" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="x:Boolean" Name="RowHasCode" />
                                               </Sequence.Variables>
@@ -390,10 +389,10 @@
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:IsMatch BuilderPattern="\d+" DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="617,60" sap2010:WorkflowViewState.IdRef="IsMatch_2" Input="[CurrentRowSectionInfo(&quot;RemainingCodes&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;+&quot;,&quot;QuantifierID&quot;:&quot;OOM&quot;,&quot;QuantifierName&quot;:&quot;At least one (1 or more)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d+" RegexOption="IgnoreCase, Compiled" Result="[RowHasCode]" />
-                                              <If Condition="[RowHasCode]" sap:VirtualizedContainerService.HintSize="617,3109" sap2010:WorkflowViewState.IdRef="If_3">
+                                              <ui:IsMatch BuilderPattern="\d+" DisplayName="Text Has Number" sap:VirtualizedContainerService.HintSize="573,60" sap2010:WorkflowViewState.IdRef="IsMatch_2" Input="[CurrentRowSectionInfo(&quot;RemainingCodes&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;+&quot;,&quot;QuantifierID&quot;:&quot;OOM&quot;,&quot;QuantifierName&quot;:&quot;At least one (1 or more)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d+" RegexOption="IgnoreCase, Compiled" Result="[RowHasCode]" />
+                                              <If Condition="[RowHasCode]" DisplayName="If Text Has Number" sap:VirtualizedContainerService.HintSize="573,2187" sap2010:WorkflowViewState.IdRef="If_3">
                                                 <If.Then>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="583,2173" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="539,1251" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                                     <Sequence.Variables>
                                                       <Variable x:TypeArguments="s:String[]" Name="SplitedString" />
                                                       <Variable x:TypeArguments="x:String" Name="CurrentCode" />
@@ -405,7 +404,7 @@
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Assign sap:VirtualizedContainerService.HintSize="541,83" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                    <Assign DisplayName="Separate data" sap:VirtualizedContainerService.HintSize="497,83" sap2010:WorkflowViewState.IdRef="Assign_13">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="s:String[]">[SplitedString]</OutArgument>
                                                       </Assign.To>
@@ -413,7 +412,7 @@
                                                         <InArgument x:TypeArguments="s:String[]">[CurrentRowSectionInfo("RemainingCodes").ToString.Split(" "c)]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <Assign sap:VirtualizedContainerService.HintSize="541,83" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                    <Assign DisplayName="Get Current Code" sap:VirtualizedContainerService.HintSize="497,83" sap2010:WorkflowViewState.IdRef="Assign_14">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:String">[CurrentCode]</OutArgument>
                                                       </Assign.To>
@@ -421,7 +420,7 @@
                                                         <InArgument x:TypeArguments="x:String">[SplitedString(0)]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <Assign sap:VirtualizedContainerService.HintSize="541,83" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                    <Assign DisplayName="Get Description" sap:VirtualizedContainerService.HintSize="497,83" sap2010:WorkflowViewState.IdRef="Assign_15">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="scg:List(x:String)">[SplitedStringLIst]</OutArgument>
                                                       </Assign.To>
@@ -429,8 +428,8 @@
                                                         <InArgument x:TypeArguments="scg:List(x:String)">[SplitedString.ToList]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <uasc:RemoveFromCollection x:TypeArguments="x:String" Item="{x:Null}" Collection="[SplitedStringList]" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="541,220" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_3" Index="0" RemoveAllElements="False" />
-                                                    <Assign sap:VirtualizedContainerService.HintSize="541,83" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                                    <uasc:RemoveFromCollection x:TypeArguments="x:String" Item="{x:Null}" Collection="[SplitedStringList]" DisplayName="Remove Code From List" sap:VirtualizedContainerService.HintSize="497,220" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_3" Index="0" RemoveAllElements="False" />
+                                                    <Assign DisplayName="Join list to formated string" sap:VirtualizedContainerService.HintSize="497,83" sap2010:WorkflowViewState.IdRef="Assign_16">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:String">[CurrentDescription]</OutArgument>
                                                       </Assign.To>
@@ -438,8 +437,8 @@
                                                         <InArgument x:TypeArguments="x:String">[String.join(" ", SplitedStringList)]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A&quot;+ (TableRow - 1).ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="541,161" sap2010:WorkflowViewState.IdRef="WriteCellX_13" Value="[CurrentRow(&quot;Seção&quot;)]" />
-                                                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentRowSectionInfo(&quot;Headers&quot;).ToString]" sap:VirtualizedContainerService.HintSize="541,1132" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                                                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A&quot;+ (TableRow - 1).ToString)]" DisplayName="Write Section Letter" sap:VirtualizedContainerService.HintSize="497,161" sap2010:WorkflowViewState.IdRef="WriteCellX_13" Value="[CurrentRow(&quot;Seção&quot;)]" />
+                                                    <Switch x:TypeArguments="x:String" DisplayName="Check What Info is being received" Expression="[CurrentRowSectionInfo(&quot;Headers&quot;).ToString]" sap:VirtualizedContainerService.HintSize="497,210" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -610,8 +609,8 @@
                                                         <ueab:TextFormat />
                                                       </ueab:FormatRangeX.Format>
                                                     </ueab:FormatRangeX>
-                                                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A&quot;+ (TableRow - 1).ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,161" sap2010:WorkflowViewState.IdRef="WriteCellX_22" Value="[CurrentRow(&quot;Seção&quot;)]" />
-                                                    <Assign sap:VirtualizedContainerService.HintSize="439,83" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A&quot;+ (TableRow - 1).ToString)]" DisplayName="Write Section Letter" sap:VirtualizedContainerService.HintSize="439,161" sap2010:WorkflowViewState.IdRef="WriteCellX_22" Value="[CurrentRow(&quot;Seção&quot;)]" />
+                                                    <Assign DisplayName="Format description String" sap:VirtualizedContainerService.HintSize="439,83" sap2010:WorkflowViewState.IdRef="Assign_19">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:String">[NewDescription]</OutArgument>
                                                       </Assign.To>
@@ -619,7 +618,7 @@
                                                         <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(CurrentRowSectionInfo("RemainingCodes").ToString.Normalize(System.Text.NormalizationForm.FormD), "\p{Mn}", "")]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;B&quot; + (TableRow - 1).ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,161" sap2010:WorkflowViewState.IdRef="WriteCellX_23" Value="[NewDescription.ToLower]" />
+                                                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;B&quot; + (TableRow - 1).ToString)]" DisplayName="Write Description" sap:VirtualizedContainerService.HintSize="439,161" sap2010:WorkflowViewState.IdRef="WriteCellX_23" Value="[NewDescription.ToLower]" />
                                                   </Sequence>
                                                 </If.Else>
                                               </If>
