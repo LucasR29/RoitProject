@@ -40,4 +40,4 @@ the information in an Excel file, removing accents and special characters.
 
 ### What the script does ###
 
-The script will install the required libraries, open the Excel file, remove accents and special characters, set everything to lower case, and save the file.
+The script will install the required libraries, access the Excel file, remove accents and special characters, set everything to lower case, and save the file.
