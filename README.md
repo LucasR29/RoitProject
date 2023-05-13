@@ -43,4 +43,4 @@ If the file is executed separately, it will work as intended.
 
 ### What the script does ###
 
-The script will open the excel file, remove accents and special characters, and set everything to lower case.
+The script will install the required libraries, open the Excel file, remove accents and special characters, set everything to lower case, and save the file.
