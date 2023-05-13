@@ -9,6 +9,7 @@ The automation will open Google Chrome, access the IBGE page, and collect inform
 The robot will access every section in the selected number of sections, open every first economic activity, and paste
 the information in an Excel file, removing accents and special characters.
 
+------------------------------------------------------------------------------------------------------------------------
 
 ## Requirements ##
 
@@ -35,11 +36,11 @@ the information in an Excel file, removing accents and special characters.
 Due to development problems, the integration of the script with the automation didn't work.
 If the file is executed separately, it will work as intended.
 
-##Libraries##
+## Libraries ##
 
 - openpyxl
 - unidecode
 
-###What the script does###
+### What the script does ###
 
 The script will open the excel file, remove accents and special characters, and set everything to lower case.
