@@ -17,6 +17,8 @@ the information in an Excel file, removing accents and special characters.
 - UI Path Orchestrator connected
 - Microsoft Excel
 - Google Chrome
+- Python 3.9 - (https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe)
+- .Net 5.0 - (https://dotnet.microsoft.com/en-us/download/dotnet/5.0)
 
 ## Orchestrator Config -- IMPORTANT ##
 ### Automation will not work without this ###
@@ -33,9 +35,6 @@ the information in an Excel file, removing accents and special characters.
 
 ## Python Script ##
 
-Due to development problems, the integration of the script with the automation didn't work.
-If the file is executed separately, it will work as intended.
-
 ## Libraries ##
 
 - openpyxl
@@ -43,4 +42,4 @@ If the file is executed separately, it will work as intended.
 
 ### What the script does ###
 
-The script will install the required libraries, open the Excel file, remove accents and special characters, set everything to lower case, and save the file.
+The script will install the required libraries, access the Excel file, remove accents and special characters, set everything to lower case, and save the file.

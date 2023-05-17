@@ -3,11 +3,11 @@ import os
 os.system('pip install openpyxl')
 os.system('pip install unidecode')
 
-from openpyxl import load_workbook
-import unidecode 
+import openpyxl
+import unidecode
 
-def clean_table():
-    file = load_workbook("IBGE_STRUCTURE.xlsx")
+def clear_table(path):
+    file = openpyxl.load_workbook(path)
 
     sheet = file.active
 
@@ -17,6 +17,6 @@ def clean_table():
 
                 cell.value = string
 
-    file.save("IBGE_STRUCTURE.xlsx")
-
-clean_table()
+    file.save(path)
+    
+    return "Formatting Completed"

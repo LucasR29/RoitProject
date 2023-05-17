@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1035,1133</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>992,1133</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -61,6 +61,7 @@
       <x:String>UiPath.Excel.Activities.Business</x:String>
       <x:String>UiPath.Excel.Model</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -144,55 +145,98 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="690,1300" sap2010:WorkflowViewState.IdRef="State_4">
+    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="638,2475" sap2010:WorkflowViewState.IdRef="State_4">
       <State.Entry>
-        <Sequence sap:VirtualizedContainerService.HintSize="644,881" sap2010:WorkflowViewState.IdRef="Sequence_41">
+        <Sequence sap:VirtualizedContainerService.HintSize="592,2056" sap2010:WorkflowViewState.IdRef="Sequence_44">
           <Sequence.Variables>
-            <Variable x:TypeArguments="sd:DataTable" Name="dt_IBGE_STRUCTURE" />
-            <Variable x:TypeArguments="scg:List(x:String)" Name="ColumnData" />
+            <Variable x:TypeArguments="x:String" Name="DirectoryPath" />
+            <Variable x:TypeArguments="x:String" Name="WindowsUser" />
+            <Variable x:TypeArguments="x:String" Name="PythonPath" />
+            <Variable x:TypeArguments="x:String" Name="NewPythonPath" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CommentOut DisplayName="Python Integration - not working" sap:VirtualizedContainerService.HintSize="582,770" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-            <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,691" sap2010:WorkflowViewState.IdRef="Sequence_42">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="530,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Windows user" Title="Inform current windows user">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">[WindowsUser]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
+          <Assign sap:VirtualizedContainerService.HintSize="530,81" sap2010:WorkflowViewState.IdRef="Assign_30">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[PythonPath]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">["C:\Users\" + WindowsUser + "\AppData\Local\Programs\Python\Python39\"]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="530,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[&quot;Python path set to: &quot; + vbNewLine + vbNewLine + PythonPath + vbNewLine +  vbNewLine + &quot; If this is incorrect please inform your python 3.9 path otherwise leave empty&quot;]" Title="Python path redefinition">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">[NewPythonPath]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
+          <If Condition="[NewPythonPath.Length &gt; 1]" sap:VirtualizedContainerService.HintSize="530,531" sap2010:WorkflowViewState.IdRef="If_15">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="476,169" sap2010:WorkflowViewState.IdRef="Sequence_45">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="484,580" sap2010:WorkflowViewState.IdRef="PythonScope_1" LibraryPath="C:\Python311\python311.dll" Path="C:\Python311" TargetPlatform="x64">
-                  <p:PythonScope.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,543" sap2010:WorkflowViewState.IdRef="Sequence_38">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="LoadScript_2" Result="[PythonScript]" ScriptFile="pythonRemoveAccents.py" />
-                        <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" Instance="[PythonScript]" Name="clean_table" Parameters="[Parameters]" Result="[PythonObject]" />
-                        <p:GetObject x:TypeArguments="x:Object" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="GetObject`1_2" PythonObject="[PythonObject]" Result="[Result]" />
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[Result]" />
-                      </Sequence>
-                    </ActivityAction>
-                  </p:PythonScope.Body>
-                </p:PythonScope>
+                <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_31">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[PythonPath]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[NewPythonPath]</InArgument>
+                  </Assign.Value>
+                </Assign>
               </Sequence>
-            </ui:CommentOut.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:CommentOut>
+            </If.Then>
+            <If.Else>
+              <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[PythonPath]" />
+              </Sequence>
+            </If.Else>
+          </If>
+          <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="530,695" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="C:\Users\lucas\AppData\Local\Programs\Python\Python39" TargetPlatform="x64" Version="Python 3.9">
+            <p:PythonScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,658" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="p:PythonObject" Name="PythonMethod" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_29">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[DirectoryPath]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[Environment.CurrentDirectory]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="LoadScript_1" Result="[PythonScript]" ScriptFile="pythonRemoveAccents.py" />
+                  <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" Instance="[PythonScript]" Name="clear_table" Parameters="[{DirectoryPath + &quot;\IBGE_STRUCTURE.xlsx&quot;}]" Result="[PythonMethod]" />
+                  <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="GetObject`1_5" PythonObject="[PythonMethod]" Result="[PythonResponse]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[PythonResponse]" />
+                </Sequence>
+              </ActivityAction>
+            </p:PythonScope.Body>
+          </p:PythonScope>
         </Sequence>
       </State.Entry>
       <sap:WorkflowViewStateService.ViewState>
@@ -522,7 +566,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <Assign DisplayName="Assign OrchestratorQueueFolder" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                        <Assign DisplayName="Assign OrchestratorQueueFolder" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_28">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Object">[Config("OrchestratorQueueFolder")]</OutArgument>
                                           </Assign.To>
@@ -788,8 +832,8 @@
       <State.Variables>
         <Variable x:TypeArguments="p:PythonObject" Name="PythonScript" />
         <Variable x:TypeArguments="scg:List(x:Object)" Default="[New List(Of Object)({3,7})]" Name="Parameters" />
-        <Variable x:TypeArguments="p:PythonObject" Name="PythonObject" />
         <Variable x:TypeArguments="x:Object" Name="Result" />
+        <Variable x:TypeArguments="x:String" Name="PythonResponse" />
       </State.Variables>
     </State>
     <x:Reference>__ReferenceID2</x:Reference>
