@@ -12,7 +12,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ColumnData&Sequence_41",
+        "NewPythonPath&Sequence_44",
+        "PythonPath&Sequence_44",
+        "WindowsUser&Sequence_44",
+        "DirectoryPath&Sequence_44",
+        "PythonResponse&State_4",
+        "PythonMethod&Sequence_43",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -27,9 +32,7 @@
         "teste&Sequence_4",
         "PythonScript&State_4",
         "Parameters&State_4",
-        "PythonObject&State_4",
-        "Result&State_4",
-        "dt_IBGE_STRUCTURE&Sequence_41"
+        "Result&State_4"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_OrchestratorQueueName",
